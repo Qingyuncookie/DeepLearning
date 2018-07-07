@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{picinpar,graphicx}
+\usepackage{multicol}
+\usepackage{lscape}
+
+\usepackage{graphicx}
+\usepackage{subfig}
+\graphicspath{{/home/li/图片/DeepLearning/}}
+
+\author{Qingyun Li}
+\date{July 7, 2018}
+\title{Neural Network and Deep Learning}
+\begin{document}
+\maketitle
+\section{Binary Classification} 
+\par We have a example of a binary classification problem, an image is an input and we output a label to recognize this image as being a cat, in which case we output 1, or not-cat which case you output 0, we're going to use y to denote the output label.
+\section{Logistic Regression}
+\par This is a learning algorithm that we use when the output labels y in a supervised learning problem are all either zero or one, so far binary classification problems.
+\par Given x, we want
+\begin{equation}
+\hat{y} = \sigma(w^{T}x+b)
+\end{equation}
+\par where $w \in R^{n_{x}}$, $b \in R$, $\sigma(z) = \frac{1}{1+e^{-z}}$.
+\par When we implement logistic regression, our job is to try to learn parameters w and b, so that $\hat{y}$ becomes a good estimate.
+\section{Logistic Regression cost function}
+\par First, we defined a loss function to measure how good our output $\hat{y}$ is when the true label is y：
+\begin{equation}
+L(\hat{y},y)=\frac{(\hat{y}-y)^{2}}{2}
+\end{equation}
+But it makes gradient descent not work well, so we define a new loss function as follows:
+\begin{equation}
+L(\hat{y},y)=-(ylog\hat{y}+(1-y)log(1-\hat{y}))
+\end{equation}
+The loss function was defined with respect to a single training example, it measures how well you're doing on a single training example.
+\par The cost function measures how well you're doing an entire training set:
+\begin{equation}
+J(w,b)=\frac{1}{m}\sum_{i-1}^{m}L(\hat{y}^{(i)},y^{(i)})
+\end{equation}
+\par The cost function is the cost of our parameters, so in training logistic regression model, we're going to try to find parameters w and b that minimize the overall cost function J written at the bottom.
+\end{document}

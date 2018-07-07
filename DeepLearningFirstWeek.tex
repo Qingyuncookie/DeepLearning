@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{picinpar,graphicx}
+\usepackage{multicol}
+\usepackage{lscape}
+
+\usepackage{graphicx}
+\usepackage{subfig}
+\graphicspath{{/home/li/图片/DeepLearning/}}
+
+\author{Qingyun Li}
+\date{July 6, 2018}
+\title{Neural Network and Deep Learning}
+\begin{document}
+\maketitle
+\section{Deep Learning} 
+ \par First, we should know what is deep learning, Wu tell us the term deep learning refers to training neural networks and sometimes it is very large networks.
+\section{Neural Network}
+\par We start with a housing price prediction example. We know the size of the house and the price of the house. And we want to fit a function to predict the price of the house as a function of the size. And we can think of this function as a neural network, and this nerual network is very simple, we can think it as a single neuron. All the neuron does is input the size, computes the linear function, takes max of zero, and then outputs the estimated price. 
+ \par In addition, this function which goes at zero for some time and then takes off as a straight line. It is called ReLU function which stands for rectified linear unit.
+ \par So this is a single neural network and a tiny little neural network, a larger neural network is formed by taking many of these single neurons and stacking them together. Instead of predicting the price of the house just from the size, we have other features, such as the number of bedrooms and this two features decide whether or not a house can fit your family's family size. And the zip code or wealth always effect the price of the house. And according to this features, we can build a neural network, as is shown at Figure.~\ref{network}. And the first row represented by x, which called input layer and the y is called output layer. If given enough data about x and y, given enough training examples with bith x and y, neural networks are remarkably good at figuring out functions that accurately map from x to y.
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.9\linewidth]{NeuralNetwork.png}
+ \caption{A Neural Network}
+ \label{network}
+\end{figure}
+\section{Supervised Learning}
+ \par It turns out that so far, almost all the economic value created by neural networks has been through one of machine learing, called supervised learning. In supervised learning, we have some input x and we want to learn a function mapping to some output y. And the supervised learning have many applications, such as online advertising, photo tagging, speech recognition, machine translation and autonomous driving. For real estate or online advertising, we always use the universally neural network architecture. For image applications we'll often use convolutional neural networks often abbreviated CNN. For sequence data, for example, audio has a temporal component and it is played out over time, so audio is most naturally represented as a one-dimensional time series. So for sequence data, we often use an RNN, a recurrent neural network. And language, English and Chinese, the alphabets or the words come one at a time, so language is also most naturally represented as sequence data. We can see the three neural networks at the Figure.~\ref{kinds}.
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.9\linewidth]{Kinds.png}
+ \caption{Three Neural Networks}
+ \label{kinds}
+\end{figure}
+ \par Machine learning is always apply to both Structured Data and Unstructured Data. Structure data means basically database of data and each of the features have a very well defined meaning. In contrast, unstructured data refers to things like audio, raw audio, or images where you might want to recognize what's in the image or text. And here the features might be the pixel values in an image or the individual words in a piece of text. 
+ \par Historically, it has been much harder for computers to make sense of unstructured data compared to structured data. But now, people just really good at interpreting unstructured data. Due to the development of deep learning and neural network, computers are now much better at interpreting unstructured data.
+\section{Why is deep learning taking off? }
+ \par Deep learning is taking off due to a large amount of data available through the digitization of the society, faster computation and innovation in the development of neural network algorithm. And the development of the hardware, whatever CPU or GPU, made the speed of computation faster, so we can train very large neural netwoks and enabled us to make a lot of progress. And in the last several years, we've seen tremendous algorithmic innovation as well. And interestingly many of the algorithmic innovations have been about trying to make neural networks run much faster. And so faster computation has really helped in terms of speeding up the rate at which you can get an experimental result back.
+\end{document}
