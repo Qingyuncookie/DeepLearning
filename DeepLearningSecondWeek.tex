@@ -37,4 +37,6 @@ The loss function was defined with respect to a single training example, it meas
 J(w,b)=\frac{1}{m}\sum_{i-1}^{m}L(\hat{y}^{(i)},y^{(i)})
 \end{equation}
 \par The cost function is the cost of our parameters, so in training logistic regression model, we're going to try to find parameters w and b that minimize the overall cost function J written at the bottom.
+\section{Gradient Descent}
+\par In the last segment, we want to find w, b that minimize J(w,b).Here is an illustration of gradient descent, as is shown at Figure.~\ref{•}, in this diagram the horizontal axes represent spatial parameters w and b. And in practice, w can be much higher dimensional, but for the purpose of plotting, we illustrate w as a single real number and be as a single real number. It turns out that this cost function J is a convex function, and this is one of the huge reasons why we use this particular cost function J for logistic regression. So to find a good value for the parameters what we'll do is initialize w and b to some initial value
 \end{document}
